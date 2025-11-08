@@ -14,7 +14,7 @@ export default function SobreScreen() {
         <Card.Content>
           <Title>Sobre o Aplicativo</Title>
           <Paragraph style={styles.paragraph}>
-            Este aplicativo foi desenvolvido como projeto acadêmico para demonstrar
+            Este aplicativo foi desenvolvido como projeto de portifolio para demonstrar
             habilidades em desenvolvimento mobile utilizando React Native e Expo.
           </Paragraph>
         </Card.Content>
