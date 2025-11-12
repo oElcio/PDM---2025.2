@@ -8,6 +8,7 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
+        headerShown: false,
         headerStyle: { backgroundColor: theme.colors.surface },
         headerTintColor: theme.colors.primary,
         tabBarStyle: { 
@@ -37,11 +38,11 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="academica"
+        name="academia"
         options={{
           title: 'Acadêmica',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="school" size={size} color={color} />
+            <Ionicons name="book-outline" size={size} color={color} />
           ),
         }}
       />
