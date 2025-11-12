@@ -20,6 +20,22 @@ export const skills = [
   "REST APIs",
   "Firebase",
   "Styled Components",
+  "Java",
+  "Python",
+  "C++",
+  "Node.js",
+  "Spring Boot",
+  "SQL",
+  "MYSQL",
+  "PostgreSQL",
+  "HTML5",
+  "CSS3",
+  "Agile Methodologies",
+  "Problem Solving",
+  "Team Collaboration",
+  "Communication Skills",
+  "UI/UX Design Principles",
+  "Debugging & Testing",
 ];
 
 export const academica = [

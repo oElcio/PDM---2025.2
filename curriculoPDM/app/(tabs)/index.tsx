@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, ScrollView, StyleSheet, Image } from 'react-native';
 import { Card, Title, Paragraph, Chip, useTheme, Button } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
@@ -6,9 +6,14 @@ import { personalData, skills } from '../../constants/data';
 
 export default function HomeScreen() {
   const theme = useTheme();
+  const [skillIndex, setSkillIndex] = useState(0);
+
+  const handleNextSkill = () => {
+    setSkillIndex((prev) => (prev + 1) % skills.length);
+  };
 
   return (
-    <ScrollView style={[styles.container, { backgroundColor: theme.colors.background }]}>
+    <ScrollView style={[styles.container, { backgroundColor: theme.colors.background }]}> 
       <View style={styles.header}>
         <Image 
           source={{ uri: personalData.foto }} 
@@ -44,11 +49,12 @@ export default function HomeScreen() {
         <Card.Content>
           <Title>Habilidades</Title>
           <View style={styles.skillsContainer}>
-            {skills.map((skill, index) => (
-              <Chip key={index} style={styles.chip} mode="outlined">
-                {skill}
-              </Chip>
-            ))}
+            <Chip style={styles.chip} mode="outlined">
+              {skills[skillIndex]}
+            </Chip>
+            <Button mode="contained" style={{ marginLeft: 8 }} onPress={handleNextSkill}>
+              Descubra Minhas Habilidades
+            </Button>
           </View>
         </Card.Content>
       </Card>
